@@ -2,11 +2,11 @@ string = input()
 stack = []
 cnt = 0
 
-for i in string:
-    if(i == "("):
-        stack.append(i)
+for i in range(len(string)):
+    if(string[i] == "("):
+        stack.append(string[i])
     else:
-        if(stack[-1]=="("):
+        if(string[i-1]=="("):
             stack.pop()
             cnt += len(stack)
         else:
