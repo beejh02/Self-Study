@@ -1,4 +1,6 @@
+n = int(input())
 arr = sorted(list(map(int,input().split())))
+n = int(input())
 ser = list(map(int,input().split()))
 
 def find(finding):
