@@ -1,21 +1,15 @@
-arr = sorted(list(map(int,input().split())))
-ser = list(map(int,input().split()))
+arr = [1,2,3,4,5,6,7,8,9]
+copy = [1,2,3,4,5,6,7,8,9]
+result = []
 
-def find(finding):
-    left = 0
-    right = len(arr)-1
+left = 0
+right = len(arr)-1
 
-    while(left < right):
-        mid = (left + right) // 2
-        if(arr[mid] >= finding):
-            right = mid
-        else:
-            left = mid+1
-    if(arr[left] == finding):
-        return 1
+while(1):
+    mid = (left + right) // 2
 
-for i in ser:
-    if(find(i) == None):
-        print(0)
-    else:
-        print(find(i))
+    result.append(sum(copy[:mid]))
+    copy = copy[mid+1:]
+    left = copy[0]
+    print(copy)
+    print(result)
