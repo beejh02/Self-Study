@@ -19,4 +19,4 @@ for i in range(len(arr)):
     arr[i] = arr[index]
     arr[index] = temp
 
-    print(arr)
+    print(arr)  
