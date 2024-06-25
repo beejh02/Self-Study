@@ -28,5 +28,5 @@ for i in range(n):
             result.append(cnt)
 
 print(len(result))
-for i in result:
+for i in sorted(result):
     print(i)
