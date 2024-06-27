@@ -1,18 +1,13 @@
-import sys
+inp = []
+result = []
 
-N = int(sys.stdin.readline())
+for i in range(10):
+    inp.append(int(input()))
 
-dp = [0 for i in range(N+1)]
+for i in range(len(inp)):
+    result.append(inp[i]%42)
 
-if (N == 1):
-    print(4)
-elif(N == 2):
-    print(6)
-else:
-    dp[0] = 1
-    dp[1] = 1
-
-    for i in range(2,N+1):
-        dp[i] = dp[i-1] + dp[i-2]
-
-    print(dp[-2]*4 + dp[-3]*2)
+print(result)
+result = set(result)
+print(result)
+print(len(result))
