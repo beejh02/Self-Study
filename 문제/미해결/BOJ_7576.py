@@ -14,7 +14,6 @@ for i in range(M):
     for j in range(N):
         if(arr[j][i] == 1):
             queue.append((j,i))
-            cnt += 1
             while(queue):
                 cury, curx = queue.popleft()
                 for dy, dx in directions:
@@ -24,5 +23,6 @@ for i in range(M):
                     if(0 <= ny < N and 0 <= nx < M and arr[ny][nx] == 0):
                         queue.append((ny,nx))
                         arr[ny][nx] = 1
+                cnt += 1
 
 print(cnt)
