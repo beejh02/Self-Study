@@ -1,28 +1,15 @@
-from collections import deque
+import sys
 
-M, N = map(int,input().split())
-arr = []
-queue = deque()
-cnt = 0
+n = int(sys.stdin.readline())
+if(n == 0):
+    print(0)
+    exit(1)
 
-for i in range(N):
-    arr.append(list(map(int,input().split())))
+dp = [0 for i in range(n+1)]
+dp[0] = 0
+dp[1] = 1
 
-directions = [(-1,0), (0,1), (1,0), (0,-1)]
+for i in range(2,n+1):
+    dp[i] = dp[i-2]+dp[i-1]
 
-for i in range(M):
-    for j in range(N):
-        if(arr[j][i] == 1):
-            queue.append((j,i))
-            cnt += 1
-            while(queue):
-                cury, curx = queue.popleft()
-                for dy, dx in directions:
-                    ny = dy + cury
-                    nx = dx + curx
-
-                    if(0 <= ny < N and 0 <= nx < M and arr[ny][nx] == 0):
-                        queue.append((ny,nx))
-                        arr[ny][nx] = 1
-
-print(cnt)
+sys.stdout.write(str(dp[-1]))
