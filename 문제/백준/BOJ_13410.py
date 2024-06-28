@@ -1,5 +1,4 @@
 N, K = map(int,input().split())
-
 arr = []
 
 for i in range(N, N*K+1, N):
