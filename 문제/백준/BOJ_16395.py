@@ -22,4 +22,4 @@ else:
             else:
                 arr[i][j] = arr[i-1][j-1] + arr[i-1][j]
 
-    print(arr[n-1][k-1])
+        print(arr[n-1][k-1])
