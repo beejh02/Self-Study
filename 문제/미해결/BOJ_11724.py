@@ -14,10 +14,9 @@ for i in range(M):
 for i in range(N):
     for j in range(N):
         if(arr[i][j] == 1):
-            queue.append((i,j))
-            visited[j] = 1
+            if(visited[i][j] == 0):
+                queue.append((i,j))
+                visited[j] = 1
+            else:
+                
 
-for i in arr:
-    print(i)
-print()
-print(visited)
