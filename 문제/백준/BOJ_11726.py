@@ -1,4 +1,6 @@
-n = int(input())
+import sys
+
+n = int(sys.stdin.readline())
 
 if(n == 1):
     print(1)
@@ -13,4 +15,4 @@ else:
     for i in range(2,n):
         dp[i] = dp[i-1] + dp[i-2]
 
-    print(dp[-1])
+    print(dp[-1]%10007)
