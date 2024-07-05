@@ -14,4 +14,4 @@ for i in range(n):
 if(5 in cnt):
     sys.stdout.write("YES")
 else:
-    print("NO")
+    sys.stdout.write("NO")
