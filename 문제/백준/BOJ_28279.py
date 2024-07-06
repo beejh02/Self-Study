@@ -1,24 +1,26 @@
 from collections import deque
 import sys
 
-N = int(input())
+N = int(sys.stdin.readline())
 
 deque = deque()
 
 for i in range(N):
-    arr = list(map(int,input().split()))
+    arr = list(map(int,sys.stdin.readline().split()))
     if(arr[0] == 1):
         deque.appendleft(arr[1])
     elif(arr[0] == 2):
         deque.append(arr[1])
     elif(arr[0] == 3):
         if(deque):
-            deque.popleft()
+            a = deque.popleft()
+            print(a)
         else:
             print(-1)
     elif(arr[0] == 4):
         if(deque):
-            deque.pop()
+            a = deque.pop()
+            print(a)
         else:
             print(-1)
     elif(arr[0] == 5):
