@@ -1,4 +1,6 @@
-n = int(input())
+import sys
+
+n = int(sys.stdin.readline())
 temp = n
 i = 2
 
