@@ -21,8 +21,6 @@ while queue:
         
         if 0 <= ny < n and 0 <= nx < m and arr[ny][nx] == 1 and visited[ny][nx] == 0:
             visited[ny][nx] = visited[cury][curx] + 1
-            print(visited[cury][curx] + 1)
-            print(visited)
             queue.append((ny, nx))
             
             if ny == n - 1 and nx == m - 1:
