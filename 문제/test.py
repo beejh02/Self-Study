@@ -1,5 +1,10 @@
-import sys
+N, M = map(int,input().split())
 
-N, M = map(int,sys.stdin.readline().split())
+dict = {}
 
-sys.stdout.write(str((N-1) * M + (M-1)))
+for i in range(N):
+    key, value = map(str,input().split())
+    dict[key] = value
+
+for i in range(M):
+    print(dict[str(input())])
