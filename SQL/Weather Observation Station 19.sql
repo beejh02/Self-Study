@@ -1,0 +1,13 @@
+SELECT
+ROUND(
+    SQRT(
+        POWER(MIN(LAT_N) - MAX(LAT_N), 2) + POWER(MIN(LONG_W) - MAX(LONG_W), 2)
+    ), 4)
+FROM STATION
+/*
+a = MIN(LAT_N)
+b = MAX(LAT_N)
+c = MIN(LONG_W)
+d = MAX(LONG_W)
+184.1616
+*/
