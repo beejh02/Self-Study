@@ -9,5 +9,5 @@ for i in N:
     elif i == '9' and nums[9] > nums[6]:
         nums[9] -= 1
         nums[6] += 1
-
-print(nums[::-1][0])
+nums.sort(reverse=True)
+print(nums[0])
