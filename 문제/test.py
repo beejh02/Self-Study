@@ -17,4 +17,4 @@ for i in A:
     else:
         cnt += i//C + 1
 
-print(cnt)
+print(cnt)ddd
