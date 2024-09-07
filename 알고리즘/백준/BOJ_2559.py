@@ -21,6 +21,4 @@ for i in range(N-K):
     start += 1
     end += 1
 
-print(answer)
-
 print(max(answer))
