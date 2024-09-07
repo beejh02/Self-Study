@@ -1,9 +1,11 @@
-N = int(input())
+import sys
+
+N = int(sys.stdin.readline())
 
 stack = []
 
 for i in range(N):
-    order = list(map(int,input().split()))
+    order = list(map(int,sys.stdin.readline().split()))
     if(order[0] == 1):
         stack.append(order[1])
     elif(order[0] == 2):
