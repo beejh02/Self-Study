@@ -1,26 +1,24 @@
-N = int(input())
+#S = 특정문자열
+#Q = 질문의 수
 
-stack = []
+#S = input()
+#Q = int(input())
 
-for i in range(N):
-    order = list(map(int,input().split()))
-    if(order[0] == 1):
-        stack.append(order[1])
-    elif(order[0] == 2):
-        if(stack):
-            a = stack.pop()
-            print(a)
-        else:
-            print(-1)
-    elif(order[0] == 3):
-        print(len(stack))
-    elif(order[0] == 4):
-        if(stack):
-            print(0)
-        else:
-            print(1)
-    elif(order[0] == 5):
-        if(stack):
-            print(stack[-1])
-        else:
-            print(-1)
+S = 'seungjaehwang'
+question = list(map(str, input().split()))
+question[1] = int(question[1])
+question[2] = int(question[2])
+
+psum = [0 for i in range(len(S))]
+temp = 0
+
+for i in range(len(S)):
+    if(S[i] == question[0]):
+        temp += 1
+    psum[i] = temp
+
+print(question)
+print(psum)
+print(S)
+
+print(psum[question[2]] - psum[question[1]])
