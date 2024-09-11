@@ -1,8 +1,12 @@
 n = int(input())
 
-arr = []
+k = 0
 
-for i in range(n):
-    arr.append(input())
+while(n > 0):
+    if(n%2 == 0):
+        n //= 2
+    else:
+        n -= 1
+        k += 1
 
-print(set(arr))
+print(k)
