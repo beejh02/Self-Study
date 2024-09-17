@@ -1,4 +1,5 @@
 import sys
+sys.setrecursionlimit(10 ** 5)
 
 N, M = map(int,sys.stdin.readline().split())
 
