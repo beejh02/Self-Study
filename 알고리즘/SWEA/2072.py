@@ -1,5 +1,5 @@
 T = int(input())
-
+#
 for i in range(T):
     result = []
     arr = list(map(int, input().split()))
