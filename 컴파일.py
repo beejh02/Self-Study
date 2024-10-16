@@ -1,2 +1,2 @@
 print("hello")
-print("백주용 보여주기")
+print("백주용 안보여주기")
